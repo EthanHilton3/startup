@@ -8,6 +8,15 @@
 - [Canvas](https://byu.instructure.com)
 - [MDN](https://developer.mozilla.org)
 
+## Git
+
+All of this requires that you commit often. You should get in the habit of consistently making a small stable change and then committing.
+
+Verify you have the latest code (git pull)
+Refactor, test, and/or implement a small portion of cohesive code (test code test)
+Commit and push (git commit git push)
+Repeat
+
 ## AWS
 
 My IP address is: 54.81.96.130
