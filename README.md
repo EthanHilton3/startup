@@ -43,20 +43,24 @@ sequenceDiagram
 
 ### Key features
 
-- Describe your key feature
-- Describe your key feature
-- Describe your key feature
+- Secure login over HTTPS
+- Clicking the icon button to update the score counter
+- Scores from all players displayed in realtime
+- User scores are persistently stored
 
 ### Technologies
 
 I am going to use the required technologies in the following ways.
 
-- **HTML** - Description here
-- **CSS** - Description here
-- **React** - Description here
-- **Service** - Description here
-- **DB/Login** - Description here
-- **WebSocket** - Description here
+- **HTML** - Uses correct HTML structure for application. HTML pages for login, for the main page of cliking, and for the scores page
+- **CSS** - Application styling that looks good on different screen sizes, uses good whitespace, color choice and contrast.
+- **React** -  Provides login, updating clicker score, displays other users scores, and use of React for routing and components.
+- **Service** - Backend service with endpoints for:
+- login
+- storing scores
+- retrieving scores
+- **DB/Login** -  Store users and scores in database. Register and login users. Credentials securely stored in database. Can't access clicker or scores unless authenticated.
+- **WebSocket** - Scores page automically updates according to players' scores in real time.
 
 ## 🚀 AWS deliverable
 
