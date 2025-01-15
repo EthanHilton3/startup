@@ -2,7 +2,7 @@
 
 [My Notes](notes.md)
 
-A brief description of the application here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Imagine Cookie Cliker but with Cosmo instead delectible baked treats. Users will click on a image of Cosmo's face to update a score of how many times they've done so. With a scores page of player's high scores, they can compete with other users to see who can be the best Cougar Clicker!
 
 
 > [!NOTE]
@@ -26,7 +26,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 ### Elevator pitch
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Click. Click click. Click click click. Is there anything more satisfying than clicking? The answer is yes! Clicking a big image of Cosmo The Cougar's face on your screen! Now you can enjoy your favorite passtime of clicking with this new BYU spirit on Cougar Clicker! Rise and Shout! The clickers are now out! Compete against friends to see who will be the Cougar Clicker Champion.
 
 ### Design
 
