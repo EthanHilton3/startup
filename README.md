@@ -22,7 +22,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] A concise and compelling elevator pitch
 - [x] Description of key features
 - [x] Description of how you will use each technology
-- [ ] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
+- [x] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
 
 ### Elevator pitch
 
@@ -49,9 +49,10 @@ I am going to use the required technologies in the following ways.
 - **CSS** - Application styling that looks good on different screen sizes, uses good whitespace, color choice and contrast.
 - **React** -  Provides login, updating clicker score, displays other users scores, and use of React for routing and components.
 - **Service** - Backend service with endpoints for:
-- login
-- storing scores
-- retrieving scores
+  - login
+  - storing scores
+  - retrieving scores
+  - calling a 3rd party quote API to display random quotes
 - **DB/Login** -  Store users and scores in database. Register and login users. Credentials securely stored in database. Can't access clicker or scores unless authenticated.
 - **WebSocket** - Scores page automically updates according to players' scores in real time.
 
