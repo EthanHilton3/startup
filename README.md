@@ -1,8 +1,4 @@
-# Your startup name here
-
-Modifying the README.md in my local repo
-
-Modifying this file in Github
+# Cougar Clicker
 
 [My Notes](notes.md)
 
