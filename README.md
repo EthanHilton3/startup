@@ -30,16 +30,9 @@ Click. Click click. Click click click. Is there anything more satisfying than cl
 
 ### Design
 
-![Uploading unnamed.jpg…]()
+![IMG_7068](https://github.com/user-attachments/assets/07745fdc-21a5-4c81-b65d-916e3ec5b590)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-```mermaid
-sequenceDiagram
-    actor You
-    actor Website
-    You->>Website: Replace this with your design
-```
+At launch, the user will be on the login page where they will either have to create an account or login in using previously made credentials. After succesffully logining, the user will be directed to the main page, the game page. It will have the button of Cosmo's face with a score counter above it. Once Cosmo is clicked, the counter increases. At the bottom of the page, there are the links to go back to the login page to logout or go to the scores page. The scores page will contain an up-to-date, table with the top 10 users of Cougar Clicker based on their score.
 
 ### Key features
 
