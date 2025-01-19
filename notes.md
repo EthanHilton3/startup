@@ -24,7 +24,7 @@ Launching my AMI I initially put it on a private subnet. Even though it had a pu
 
 how to access my AWS server
 
-ssh -i ~/Downloads/260key.pem ubuntu@54.235.50.209
+ssh -i ~/Downloads/260key.pem ubuntu@107.21.94.91
 
 
 ## Caddy
