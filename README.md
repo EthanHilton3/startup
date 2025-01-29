@@ -66,15 +66,15 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [x] **HTML pages** - I have 4 html pages: home (named index.html), play, scores, about
-- [x] **Proper HTML element usage** - I use various html elements correctly, including a `nav` on every page and each of my `body` elements has a `header`, `main` and `footer` 
-- [x] **Links** - I did not complete this part of the deliverable.
-- [x] **Text** - I did not complete this part of the deliverable.
-- [x] **3rd party API placeholder** - I did not complete this part of the deliverable.
-- [x] **Images** - I did not complete this part of the deliverable.
-- [x] **Login placeholder** - I did not complete this part of the deliverable.
-- [x] **DB data placeholder** - I did not complete this part of the deliverable.
-- [x] **WebSocket placeholder** - I did not complete this part of the deliverable.
+- [x] **HTML pages** - I have 4 html pages: home (named index.html), play, scores, about.
+- [x] **Proper HTML element usage** - I use various html elements correctly, including a `nav` on every page and each of my `body` elements has a `header`, `main` and `footer`.
+- [x] **Links** - I used links in the `nav` of every page to access the other pages of the site. Also the link to my GitHub repo is in the footer of every page.
+- [x] **Text** - I use text in `paragraph` elements as well as others.
+- [x] **3rd party API placeholder** - On the play.html page, there is a placeholder for the Anime Quote API I will be implementing.
+- [x] **Images** - I changed the icon for the site as well as added the image of Cosmo's face as the button on the play.html page. There is also an image of BYU campus on the about.html page.
+- [x] **Login placeholder** - There is a mock login page that has the `form` element to send the username and password to the server.
+- [x] **DB data placeholder** - The scores.html page contains a table that will be propogated by the inforamtion of other player's scores as stored and accessed from a DB.
+- [x] **WebSocket placeholder** - On the play.html page, there is the placeholder for when the WebSocket will display when another user starts playing the game and how many clicks the have.
 
 ## 🚀 CSS deliverable
 
