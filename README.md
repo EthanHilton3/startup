@@ -66,8 +66,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [x] **HTML pages** - I did not complete this part of the deliverable.
-- [x] **Proper HTML element usage** - I did not complete this part of the deliverable.
+- [x] **HTML pages** - I have 4 html pages: home (named index.html), play, scores, about
+- [x] **Proper HTML element usage** - I use various html elements correctly, including a `nav` on every page and each of my `body` elements has a `header`, `main` and `footer` 
 - [x] **Links** - I did not complete this part of the deliverable.
 - [x] **Text** - I did not complete this part of the deliverable.
 - [x] **3rd party API placeholder** - I did not complete this part of the deliverable.
