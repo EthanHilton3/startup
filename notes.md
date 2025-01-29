@@ -31,6 +31,7 @@ No problems worked just like it said in the [instruction](https://github.com/web
 ## HTML
 
 deployment command simon: ./deployFiles.sh -k ~/Downloads/260key.pem -h peachfromtheirs.click -s simon
+
 deployment command startup: ./deployFiles.sh -k ~/Downloads/260key.pem -h peachfromtheirs.click -s startup
 
 
