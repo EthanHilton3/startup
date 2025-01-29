@@ -1,12 +1,8 @@
-# Your startup name here
-
-Modifying the README.md in my local repo
-
-Modifying this file in Github
+# Cougar Clicker
 
 [My Notes](notes.md)
 
-A brief description of the application here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Imagine Cookie Cliker but with Cosmo instead delectible baked treats. Users will click on a image of Cosmo's face to update a score of how many times they've done so. With a scores page of player's high scores, they can compete with other users to see who can be the best Cougar Clicker!
 
 
 > [!NOTE]
@@ -22,51 +18,49 @@ A brief description of the application here. Lorem ipsum dolor sit amet, consect
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] Proper use of Markdown
-- [ ] A concise and compelling elevator pitch
-- [ ] Description of key features
-- [ ] Description of how you will use each technology
-- [ ] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
+- [x] Proper use of Markdown
+- [x] A concise and compelling elevator pitch
+- [x] Description of key features
+- [x] Description of how you will use each technology
+- [x] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
 
 ### Elevator pitch
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Click. Click click. Click click click. Is there anything more satisfying than clicking? The answer is yes! Clicking a big image of Cosmo The Cougar's face on your screen! Now you can enjoy your favorite passtime of clicking with this new BYU spirit on Cougar Clicker! Rise and Shout! The clickers are now out! Compete against friends to see who will be the Cougar Clicker Champion.
 
 ### Design
 
-![Design image](placeholder.png)
+![IMG_7068](https://github.com/user-attachments/assets/07745fdc-21a5-4c81-b65d-916e3ec5b590)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-```mermaid
-sequenceDiagram
-    actor You
-    actor Website
-    You->>Website: Replace this with your design
-```
+At launch, the user will be on the login page where they will either have to create an account or login in using previously made credentials. After succesffully logining, the user will be directed to the main page, the game page. It will have the button of Cosmo's face with a score counter above it. Once Cosmo is clicked, the counter increases. At the bottom of the page, there are the links to go back to the login page to logout or go to the scores page. The scores page will contain an up-to-date, table with the top 10 users of Cougar Clicker based on their score.
 
 ### Key features
 
-- Describe your key feature
-- Describe your key feature
-- Describe your key feature
+- Secure login over HTTPS
+- Clicking the icon button to update the score counter
+- Scores from all players displayed in realtime
+- User scores are persistently stored
 
 ### Technologies
 
 I am going to use the required technologies in the following ways.
 
-- **HTML** - Description here
-- **CSS** - Description here
-- **React** - Description here
-- **Service** - Description here
-- **DB/Login** - Description here
-- **WebSocket** - Description here
+- **HTML** - Uses correct HTML structure for application. HTML pages for login, for the main page of cliking, and for the scores page
+- **CSS** - Application styling that looks good on different screen sizes, uses good whitespace, color choice and contrast.
+- **React** -  Provides login, updating clicker score, displays other users scores, and use of React for routing and components.
+- **Service** - Backend service with endpoints for:
+  - login
+  - storing scores
+  - retrieving scores
+  - calling a 3rd party quote API to display random quotes
+- **DB/Login** -  Store users and scores in database. Register and login users. Credentials securely stored in database. Can't access clicker or scores unless authenticated.
+- **WebSocket** - Scores page automically updates according to players' scores in real time.
 
 ## 🚀 AWS deliverable
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Server deployed and accessible with custom domain name** - [My server link](https://yourdomainnamehere.click).
+- [x] **Server deployed and accessible with custom domain name** - [My server link](https://peachfromtheirs.click).
 
 ## 🚀 HTML deliverable
 
