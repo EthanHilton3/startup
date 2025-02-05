@@ -4,10 +4,6 @@ body {
   min-width: 375px;
 }
 
-header {
-  background-color: rgb(0, 61, 165);
-}
-
 main {
   flex: 1 calc(100vh - 60px);
   display: flex;
@@ -19,7 +15,6 @@ main {
 
 footer {
    flex: 1; 
-  /* background-color: rgb(0, 61, 165); */
 }
 
 menu {
