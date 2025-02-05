@@ -9,7 +9,7 @@
 }
 
 .player-name {
-  color: rgb(118, 190, 210);
+  color: rgb(0, 61, 165);
 }
 
 #player-messages {
@@ -29,18 +29,7 @@
   color: rgb(221, 148, 40);
 }
 
-.game {
-  background: rgb(0, 0, 0);
-  border-radius: 50%;
-  box-shadow: 0 0 20px 5px rgb(69, 69, 69);
-  width: 80vw;
-  height: 80vw;
-  position: absolute;
-  min-width: 350px;
-  min-height: 350px;
-  max-width: min(80vmin, 1000px);
-  max-height: min(80vmin, 1000px);
-}
+
 
 .button-container {
   width: 100%;
@@ -50,45 +39,14 @@
   gap: 20px;
 }
 
-.button-top-left {
-  border-radius: 100% 0 0 0;
-  margin: 20px 0 0 20px;
-  background-color: green;
-  border: thick solid rgb(36, 53, 0);
-}
-
-.button-top-right {
-  border-radius: 0 100% 0 0;
-  margin: 20px 20px 0 0;
-  background-color: red;
-  border: thick solid rgb(83, 12, 12);
-}
-
-.button-bottom-left {
-  border-radius: 0 0 0 100%;
-  margin: 0 0 20px 20px;
-  background-color: yellow;
-  border: thick solid rgb(130, 124, 13);
-}
-
-.button-bottom-right {
-  border-radius: 0 0 100% 0;
-  margin: 0 20px 20px 0;
-  background-color: blue;
-  border: thick solid rgb(27, 14, 100);
-}
 
 .controls {
-  position: absolute;
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  background-color: black;
-  padding: 2em;
+  display: flex;
+  padding: 3em;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .game-name {
@@ -99,7 +57,7 @@
 
 .score {
   position: absolute;
-  text-align: center;
+  text-align: top;
   font-size: 20px;
   font-family: monospace;
   font-weight: bold;
