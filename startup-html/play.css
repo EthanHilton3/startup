@@ -18,7 +18,7 @@
 }
 
 .event {
-  color: rgb(69, 69, 69);
+  color: rgb(220, 220, 220);
 }
 
 .player-event {
@@ -51,5 +51,25 @@
   border-radius: 15px;
   border: solid thin rgb(0, 61, 165);
   background-color: white;
+}
+
+.quote {
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+.quote-box {
+  margin-top: 1em;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+.author {
+  font-weight: bold;
+  text-align: right;
+}
+
+.author::before {
+  content: " - ";
 }
 

@@ -1,3 +1,14 @@
+.lyrics {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+
 .picture-box {
   height: calc(100px + 1em);
   margin-bottom: 1em;
@@ -6,23 +17,14 @@
   border-radius: 5px;
 }
 
-.quote-box {
-  margin-top: 1em;
-  padding: 0.5em;
-  border-radius: 5px;
-}
-
-.quote {
-  font-style: italic;
-}
-
-.author {
-  font-weight: bold;
-  text-align: right;
-}
-
-.author::before {
-  content: " - ";
+.picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100v;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 #picture img {
