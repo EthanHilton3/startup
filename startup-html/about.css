@@ -5,26 +5,36 @@
   align-items: center;
   padding: 0.5em;
   border-radius: 5px;
-  max-width: 45%;
+  max-width: 60%;
+  font-size:1.5em;
+  font-style: italic;
 }
 
+.about {
+  display: flex;
+  align-items: center;
+  padding: 0.5em;
+  font-size:1.5em;
+  font-style: italic;
+}
 
 .picture-box {
   height: calc(100px + 1em);
-  margin-bottom: 1em;
+  margin: 1em;
   padding: 0.5em;
   background: rgb(86, 89, 93);
   border-radius: 5px;
+  width: 840px;
+  height: 306px;
 }
 
 .picture {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100v;
-  height: 100px;
+  width: 100vw;
+  height: 100vh;
   border-radius: 50%;
-  overflow: hidden;
 }
 
 #picture img {
