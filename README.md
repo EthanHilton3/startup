@@ -80,12 +80,12 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Header, footer, and main content body** - I did not complete this part of the deliverable.
-- [ ] **Navigation elements** - I did not complete this part of the deliverable.
-- [ ] **Responsive to window resizing** - I did not complete this part of the deliverable.
-- [ ] **Application elements** - I did not complete this part of the deliverable.
-- [ ] **Application text content** - I did not complete this part of the deliverable.
-- [ ] **Application images** - I did not complete this part of the deliverable.
+- [x] **Header, footer, and main content body** - I used my main.css file to give default settings to these elements.
+- [x] **Navigation elements** - I used bootstrap for the menu but overrode it to make it horizontal.
+- [x] **Responsive to window resizing** - I gave the elements in my html files flex identifier and made most elements responsively stay in the center of the screen.
+- [x] **Application elements** - I made my play page look all officaily with the styling of the Cosmo button and showing the score.
+- [x] **Application text content** - I styled the text on all my pages.
+- [x] **Application images** - I have a styled image of Cosmo on my play screen and a picture of byu campus on my about page.
 
 ## 🚀 React part 1: Routing deliverable
 
