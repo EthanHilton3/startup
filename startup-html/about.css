@@ -3,9 +3,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 1em;
   padding: 0.5em;
   border-radius: 5px;
+  max-width: 45%;
 }
 
 
