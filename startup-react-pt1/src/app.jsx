@@ -10,10 +10,10 @@ import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 export default function App() {
     return (
         <BrowserRouter>
-            <div class="text-light">
-                <header class="flex">
-                    <nav class="navbar flex navbar-expand-lg navbar-dark bg-dark">
-                        <div class="navbar-brand" href="#">
+            <div className="text-light">
+                <header className="flex">
+                    <nav className="navbar flex navbar-expand-lg navbar-dark bg-dark">
+                        <div className="navbar-brand" href="#">
                             Cougar Clicker
                         </div>
                         <menu className="navbar-nav">
@@ -51,9 +51,9 @@ export default function App() {
                     <Route path='*' element={<NotFound />} />
                 </Routes>
         
-                <footer class="flex bg-dark text-white-50">
-                    <div class="container-fluid">
-                        <span class="text-reset">Ethan Hilton</span>
+                <footer className="flex bg-dark text-white-50">
+                    <div className="container-fluid">
+                        <span className="text-reset">Ethan Hilton</span>
                         <a href="https://github.com/EthanHilton3/startup">
                             GitHub
                         </a>
