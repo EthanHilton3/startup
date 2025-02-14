@@ -113,3 +113,6 @@ Handling the toggling of the checkboxes was particularly interesting.
   ))}
 </div>
 ```
+
+
+API https://github.com/Animechan-API/animechan/tree/main/client
