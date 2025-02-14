@@ -1,3 +1,12 @@
+.about-page {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .lyrics {
   display: flex;
   flex-direction: column;
@@ -19,13 +28,12 @@
 }
 
 .picture-box {
-  height: calc(100px + 1em);
+  width: 100vw - 2em;
   margin: 1em;
   padding: 0.5em;
   background: rgb(86, 89, 93);
   border-radius: 5px;
-  width: 840px;
-  height: 306px;
+  
 }
 
 .picture {
