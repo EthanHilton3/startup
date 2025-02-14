@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function play() {
+export function Play() {
   return (
     <main className="container-fluid bg-secondary text-center">
       <div>play displayed here</div>
