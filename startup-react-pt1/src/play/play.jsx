@@ -18,7 +18,7 @@ export function Play() {
       <hr />
       <div className="game flex">
         <button className="btn btn-primary">
-          <img src="cosmo_the_cougar_machine_embroidery_design.jpg" />
+          <img className="cosmo" src="cosmo_the_cougar_machine_embroidery_design.jpg" />
         </button>
       </div>
 
