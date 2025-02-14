@@ -1,7 +1,7 @@
 .body {
   display: flex;
   flex-direction: column;
-  min-width: 375x;
+  min-width: 375px;
 }
 
 header {
@@ -15,6 +15,7 @@ main {
   align-items: center;
   justify-content: space-around;
   background-color: rgb(0, 46, 93);
+  color: white;
 }
 
 footer {
