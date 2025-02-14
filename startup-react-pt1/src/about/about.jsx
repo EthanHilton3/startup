@@ -3,25 +3,41 @@ import './about.css';
 
 export function About() {
   return (
-    <main className="container-fluid bg-secondary text-center">
-      <div>
-        <div id="picture" className="picture-box"><img src="placeholder.jpg" alt="random" /></div>
+    <main>
+      <div id="picture" className="picture-box"><img width="840px" src="byu_university.jpg" alt="random" /></div>
 
-        <p>
-          Simon is a repetitive memory game where you follow the demonstrated color sequence until you make a mistake.
-          The longer the sequence you repeat, the greater your score.
-        </p>
+      <p className="flex lyrics">
+        Rise all loyal Cougars and hurl your challenge to the foe.
+        You will fight, day or night, rain or snow.
+        Loyal, strong, and true
+        Wear the white and blue.
+        While we sing, get set to spring.
+        Come on Cougars it's up to you. Oh!
+      </p>
+      
+      <p className="flex lyrics">
+        Rise and shout, the Cougars are out
+        along the trail to fame and glory.
+        Rise and shout, our cheers will ring out
+        As you unfold your victr'y story.
+      </p>
+      
+      <p className="flex lyrics">
+        On you go to vanquish the foe for Alma Mater's sons and daughters.
+        As we join in song, in praise of you, our faith is strong.
+        We'll raise our colors high in the blue
+        And cheer our Cougars of BYU.
+      </p>
+  
+      <hr />
 
-        <p>
-          The name Simon is a registered trademark of Milton-Bradley. Our use of the name and the game is for non-profit
-          educational use only. No part of this code or program should be used outside of that definition.
-        </p>
+      <p className="text-center">
+        The lyrics to the BYU fight song are used with permission from the BYU Music Office.
+      </p>
 
-        <div id="quote" className="quote-box bg-light text-dark">
-          <p className="quote">Words are cheap. Show me the code.</p>
-          <p className="author">Linus Torvalds</p>
-        </div>
-      </div>
+      <p className="text-center">
+        This site is in no way affiliated with Brigham Young University. It is a fan site created for educational purposes.
+      </p>
     </main>
   );
 }
