@@ -19,8 +19,8 @@ export function Players(props) {
   function handleGameEvent(event) {
     setEvent((prevEvents) => {
       let newEvents = [event, ...prevEvents];
-      if (newEvents.length > 10) {
-        newEvents = newEvents.slice(1, 10);
+      if (newEvents.length > 5) {
+        newEvents = newEvents.slice(1, 5);
       }
       return newEvents;
     });
@@ -30,7 +30,7 @@ export function Players(props) {
     const messageArray = [];
     for (const [i, event] of events.entries()) {
       let message = 'unknown';
-      if (event.type === GameEvent.End) {
+      if (event.type === GameEvent.Update) {
         message = `scored ${event.value.score}`;
       } else if (event.type === GameEvent.Start) {
         message = `started a new game`;

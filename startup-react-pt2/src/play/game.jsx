@@ -16,8 +16,12 @@ export function Game(props) {
         const newScore = { name: userName, score: score, startDate: date, currentDate: date};
         updateScoresLocal(newScore);
 
+        if (count === 0) {
+            GameNotifier.broadcastEvent(userName, GameEvent.Start, newScore);
+        }
+        
         if ((count + 1) % 25 === 0) {
-            GameNotifier.broadcastEvent(userName, GameEvent.End, newScore);
+            GameNotifier.broadcastEvent(userName, GameEvent.Update, newScore);
         }
     }
 

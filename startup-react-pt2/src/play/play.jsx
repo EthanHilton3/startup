@@ -27,14 +27,6 @@ export function Play(props) {
           <div className="event"><span className="system-event">game</span> got 337 clicks!</div>
         </div>
       </div>
-
-      <div className="score">1,000,000,000,000</div>
-      <hr />
-      <div className="game flex">
-        <button className="btn btn-primary">
-          <img className="cosmo" src="cosmo_the_cougar_machine_embroidery_design.jpg" />
-        </button>
-      </div>
       */}
       <div className="quote-box flex text-center">
         <p className='quote'>{quote}</p>
