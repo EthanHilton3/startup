@@ -7,70 +7,70 @@ import './play.css';
 export function Game(props) {
     const userName = props.userName;
     console.log(userName);
-    const [count, setCount] = React.useState(parseInt(localStorage.getItem('count')) || 0);
+    let scores = JSON.parse(localStorage.getItem('scores'));
+    let playerClicks = 0;
+    if (scores) {
+      playerClicks = scores.find((score) => score.name === userName)?.clicks || 0;
+    }
+    const [count, setCount] = React.useState(playerClicks);
 
     function incrementCount() {
-        setCount(count + 1);
-        localStorage.setItem('count', count + 1);
+      let clicks = count + 1;
+      setCount(clicks);
+      localStorage.setItem('count', clicks);
 
-        const date = new Date().toLocaleDateString();
-        const newScore = { name: userName, clicks: count + 1, date: date};
-        console.log(newScore);
-        updateScoresLocal(newScore);
+      const date = new Date().toLocaleDateString();
+      const newScore = { name: userName, clicks: clicks, date: date};
+      console.log(newScore);
+      updateScoresLocal(newScore);
 
-        if (count === 0) {
-            GameNotifier.broadcastEvent(userName, GameEvent.Start, newScore);
-        }
-        
-        if ((count + 1) % 25 === 0) {
-            GameNotifier.broadcastEvent(userName, GameEvent.Update, newScore);
-        }
+      if (clicks === 1) {
+        GameNotifier.broadcastEvent(userName, GameEvent.Start, newScore);
+      }
+      
+      if ((clicks) % 25 === 0) {
+        GameNotifier.broadcastEvent(userName, GameEvent.Update, newScore);
+      }
     }
 
     function updateScoresLocal(newScore) {
-        let scores = [];
-        const scoresText = localStorage.getItem('scores');
-        if (scoresText) {
-          scores = JSON.parse(scoresText);
-        }
+      let scores = [];
+      const scoresText = localStorage.getItem('scores');
+      if (scoresText) {
+        scores = JSON.parse(scoresText);
+      }
 
-        let found = false;
-        for (const [i, username] of scores.entries()) {
-            if (newScore.name === username.name) {
-                scores.splice(i, 1);
-                found = true;
-                break;
-            }
+      let found = false;       
+      for (const [i, prevScore] of scores.entries()) {
+        if (prevScore.name === newScore.name) {
+        scores[i] = newScore;
+        found = true;
+        break;
         }
-        
-        for (const [i, prevScore] of scores.entries()) {
-          if (newScore.score > prevScore.score) {
-            scores.splice(i, 0, newScore);
-            found = true;
-            break;
-          }
-        }
+      }
     
-        if (!found) {
-          scores.push(newScore);
-        }
+      if (!found) {
+        scores.push(newScore);
+      }
     
-        if (scores.length > 10) {
-          scores.length = 10;
-        }
+      scores.sort((a, b) => b.clicks - a.clicks);
     
-        localStorage.setItem('scores', JSON.stringify(scores));
+      if (scores.length > 10) {
+        scores.length = 10;
+      }
+    
+      localStorage.setItem('scores', JSON.stringify(scores));
       }
 
     return (
-        <div className='game'>
-            <div className="score">{count}</div>
-            <hr />
-            <div className="flex">
-                <Button className="btn btn-primary" onClick={incrementCount}>
-                <img className="cosmo" src="cosmo_the_cougar_machine_embroidery_design.jpg" />
-                </Button>
-            </div>
+      <div className='game'>
+        <div className="score">{count}</div>
+        <hr />
+        <div className="flex">
+          <Button className="btn btn-primary" onClick={incrementCount}>
+          <img className="cosmo" src="cosmo_the_cougar_machine_embroidery_design.jpg" />
+          </Button>
         </div>
+      </div>
     );
 } 
