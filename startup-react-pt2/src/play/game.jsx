@@ -6,7 +6,6 @@ import './play.css';
 
 export function Game(props) {
     const userName = props.userName;
-    console.log(userName);
     let scores = JSON.parse(localStorage.getItem('scores'));
     let playerClicks = 0;
     if (scores) {
@@ -21,7 +20,6 @@ export function Game(props) {
 
       const date = new Date().toLocaleDateString();
       const newScore = { name: userName, clicks: clicks, date: date};
-      console.log(newScore);
       updateScoresLocal(newScore);
 
       if (clicks === 1) {

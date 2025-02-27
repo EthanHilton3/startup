@@ -31,7 +31,13 @@ export function Players(props) {
     for (const [i, event] of events.entries()) {
       let message = 'unknown';
       if (event.type === GameEvent.Update) {
-        message = `scored ${event.value.score}`;
+        console.log("event:");
+        console.log(event);
+        console.log("event.value:");
+        console.log(event.value);
+        console.log("event.value.score:");
+        console.log(event.value.score);
+        message = `has ${event.value.clicks} clicks!`;
       } else if (event.type === GameEvent.Start) {
         message = `started a new game`;
       } else if (event.type === GameEvent.System) {
