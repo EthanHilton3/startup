@@ -1,0 +1,5 @@
+td {
+  max-width: 40vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
