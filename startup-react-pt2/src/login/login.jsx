@@ -22,7 +22,6 @@ export function Login({ userName, authState, onAuthChange }) {
           />
         )}
       </div>
-     
     </main>
   );
 }
