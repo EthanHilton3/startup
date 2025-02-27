@@ -2,8 +2,19 @@ import React from 'react';
 import './play.css';
 
 export function Play() {
+  const [quote, setQuote] = React.useState('Loading...');
+  const [quoteAuthor, setQuoteAuthor] = React.useState('unknown');
+
+  React.useEffect(() => {
+    setQuote('Believe It!');
+    setQuoteAuthor('Naruto Uzumaki');
+  }, []);
+
   return (
     <main className="flex">
+      <Players userName={props.userName} />
+      <Game userName={props.userName} />
+    {/* 
       <div className="players">
         Player
         <span className="player-name">Mystery player</span>
@@ -21,12 +32,11 @@ export function Play() {
           <img className="cosmo" src="cosmo_the_cougar_machine_embroidery_design.jpg" />
         </button>
       </div>
-
+      */}
       <div className="quote-box flex text-center">
-        <div className="quote">"Believe it!!"</div>
-        <div className="author">Naruto Uzumaki</div>
+        <p className='quote'>{quote}</p>
+        <p className='author'>{quoteAuthor}</p>
       </div>
-
     </main>
   );
 }
