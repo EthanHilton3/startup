@@ -17,17 +17,7 @@ export function Play(props) {
     <main className="flex">
       <Players userName={props.userName} />
       <Game userName={props.userName} />
-    {/* 
-      <div className="players">
-        Player
-        <span className="player-name">Mystery player</span>
-        <div id="player-messages">
-          <div className="event"><span className="player-event">Linus</span> started clicking</div>
-          <div className="event"><span className="player-event">Linus</span> started clicking</div>
-          <div className="event"><span className="system-event">game</span> got 337 clicks!</div>
-        </div>
-      </div>
-      */}
+
       <div className="quote-box flex text-center">
         <p className='quote'>{quote}</p>
         <p className='author'>{quoteAuthor}</p>

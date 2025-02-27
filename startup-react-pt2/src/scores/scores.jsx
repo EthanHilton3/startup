@@ -20,10 +20,9 @@ export function Scores() {
       scoreRows.push(
         <tr key={i}>
           <td>{i}</td>
-          <td>{score.name.split('@')[0]}</td>
-          <td>{score.click}</td>
-          <td>{score.firstdate}</td>
-          <td>{score.latestdate}</td>
+          <td>{score.name/*.split('@')[0]*/}</td>
+          <td>{score.clicks}</td>
+          <td>{score.date}</td>
         </tr>
       );
     }
@@ -43,7 +42,6 @@ export function Scores() {
             <th>Rank</th>
             <th>Name</th>
             <th>Clicks</th>
-            <th>Date of First Click</th>
             <th>Date of Last Click</th>
           </tr>
         </thead>

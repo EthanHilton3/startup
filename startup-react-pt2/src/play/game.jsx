@@ -6,6 +6,7 @@ import './play.css';
 
 export function Game(props) {
     const userName = props.userName;
+    console.log(userName);
     const [count, setCount] = React.useState(parseInt(localStorage.getItem('count')) || 0);
 
     function incrementCount() {
@@ -13,7 +14,8 @@ export function Game(props) {
         localStorage.setItem('count', count + 1);
 
         const date = new Date().toLocaleDateString();
-        const newScore = { name: userName, score: score, startDate: date, currentDate: date};
+        const newScore = { name: userName, clicks: count + 1, date: date};
+        console.log(newScore);
         updateScoresLocal(newScore);
 
         if (count === 0) {
@@ -31,8 +33,16 @@ export function Game(props) {
         if (scoresText) {
           scores = JSON.parse(scoresText);
         }
-    
+
         let found = false;
+        for (const [i, username] of scores.entries()) {
+            if (newScore.name === username.name) {
+                scores.splice(i, 1);
+                found = true;
+                break;
+            }
+        }
+        
         for (const [i, prevScore] of scores.entries()) {
           if (newScore.score > prevScore.score) {
             scores.splice(i, 0, newScore);
