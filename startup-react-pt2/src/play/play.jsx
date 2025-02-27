@@ -1,7 +1,10 @@
 import React from 'react';
 import './play.css';
 
-export function Play() {
+import { Players } from './players';
+import { Game } from './game';
+
+export function Play(props) {
   const [quote, setQuote] = React.useState('Loading...');
   const [quoteAuthor, setQuoteAuthor] = React.useState('unknown');
 
