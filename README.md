@@ -99,8 +99,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **All functionality implemented or mocked out** - I did not complete this part of the deliverable.
-- [ ] **Hooks** - I did not complete this part of the deliverable.
+- [X] **All functionality implemented or mocked out** - My game is now fully functional. You can press cosmo's face and the counter will update. The score is saved on the scores page nad acuuracntly updates and is used based on the given user.
+- [X] **Hooks** - useState is used on app.jsx, play.jsx and score.jsx, for the user names, quote information, and scores.
 
 ## 🚀 Service deliverable
 
