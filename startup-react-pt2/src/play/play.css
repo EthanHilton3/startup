@@ -31,11 +31,11 @@
 
 .game {
   flex: content;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-color: rgb(0, 46, 93);
 }
 
 img {

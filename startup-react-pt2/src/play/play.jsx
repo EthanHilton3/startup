@@ -14,7 +14,7 @@ export function Play(props) {
   }, []);
 
   return (
-    <main className="flex">
+    <main>
       <Players userName={props.userName} />
       <Game userName={props.userName} />
 
