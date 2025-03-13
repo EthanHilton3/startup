@@ -9,8 +9,9 @@ export function Play(props) {
   const [quoteAuthor, setQuoteAuthor] = React.useState('unknown');
 
   React.useEffect(() => {
-    fetch("https://animechan.xyz/api/random/anime?title=naruto")
+    fetch("/api/quote")
       .then((response) => response.json())
+      .then(console.log(data))
       .then((data) => {
         setQuote(data.quote);
         setQuoteAuthor(data.character);

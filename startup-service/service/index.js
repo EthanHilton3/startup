@@ -26,6 +26,18 @@ app.use(express.static('public'));
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
+// 3rd party API endpoint
+app.use(cors());
+app.get("http://localhost:5000/api/quote", async (req, res) => {
+  try {
+      const response = await fetch("https://animechan.io/api/v1/quotes/random/anime?title=naruto");
+      const data = await response.json();
+      res.json(data);
+  } catch (error) {
+      res.status(500).json({ error: "Failed to fetch quote" });
+  }
+});
+
 // CreateAuth a new user
 apiRouter.post('/auth/create', async (req, res) => {
   if (await findUser('email', req.body.email)) {
