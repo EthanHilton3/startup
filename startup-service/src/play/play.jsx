@@ -11,7 +11,6 @@ export function Play(props) {
   React.useEffect(() => {
     fetch("/api/quote")
       .then((response) => response.json())
-      .then(console.log(data))
       .then((data) => {
         setQuote(data.quote);
         setQuoteAuthor(data.character);

@@ -13,14 +13,20 @@ export function Game(props) {
     }
     const [count, setCount] = React.useState(playerClicks);
 
-    function incrementCount() {
+    async function incrementCount() {
       let clicks = count + 1;
       setCount(clicks);
       localStorage.setItem('count', clicks);
 
       const date = new Date().toLocaleDateString();
       const newScore = { name: userName, clicks: clicks, date: date};
-      updateScoresLocal(newScore);
+      // updateScoresLocal(newScore);
+
+      await fetch('/api/score', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(newScore),
+      });
 
       if (clicks === 1) {
         GameNotifier.broadcastEvent(userName, GameEvent.Start, newScore);

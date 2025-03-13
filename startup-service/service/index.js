@@ -3,6 +3,7 @@ const bcrypt = require('bcryptjs');
 const express = require('express');
 const uuid = require('uuid');
 const app = express();
+const cors = require("cors");
 
 const authCookieName = 'token';
 
@@ -28,13 +29,14 @@ app.use(`/api`, apiRouter);
 
 // 3rd party API endpoint
 app.use(cors());
-app.get("http://localhost:5000/api/quote", async (req, res) => {
+apiRouter.get("/api/quote", async (_req, res) => {
   try {
       const response = await fetch("https://animechan.io/api/v1/quotes/random/anime?title=naruto");
-      const data = await response.json();
-      res.json(data);
+      const data = await response;
+      console.log(data)
+      res.send(data);
   } catch (error) {
-      res.status(500).json({ error: "Failed to fetch quote" });
+      res.status(500).send({ msg: "Failed to fetch quote" });
   }
 });
 
