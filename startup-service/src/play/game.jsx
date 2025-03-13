@@ -37,35 +37,6 @@ export function Game(props) {
       }
     }
 
-    function updateScoresLocal(newScore) {
-      let scores = [];
-      const scoresText = localStorage.getItem('scores');
-      if (scoresText) {
-        scores = JSON.parse(scoresText);
-      }
-
-      let found = false;       
-      for (const [i, prevScore] of scores.entries()) {
-        if (prevScore.name === newScore.name) {
-        scores[i] = newScore;
-        found = true;
-        break;
-        }
-      }
-    
-      if (!found) {
-        scores.push(newScore);
-      }
-    
-      scores.sort((a, b) => b.clicks - a.clicks);
-    
-      if (scores.length > 10) {
-        scores.length = 10;
-      }
-    
-      localStorage.setItem('scores', JSON.stringify(scores));
-      }
-
     return (
       <div className='game'>
         <div className="score">{count}</div>

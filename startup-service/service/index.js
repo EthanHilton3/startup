@@ -31,7 +31,7 @@ app.use(`/api`, apiRouter);
 app.use(cors());
 apiRouter.get("/api/quote", async (_req, res) => {
   try {
-      const response = await fetch("https://animechan.io/api/v1/quotes/random/anime?title=naruto");
+      const response = await fetch("https://ww25.animechan.io/api/v1/quotes/random/anime?title=naruto");
       const data = await response;
       console.log(data)
       res.send(data);
@@ -109,18 +109,20 @@ app.use((_req, res) => {
 
 // updateScores considers a new score for inclusion in the high scores.
 function updateScores(newScore) {
-  let found = false;
+  let found = false;       
   for (const [i, prevScore] of scores.entries()) {
-    if (newScore.score > prevScore.score) {
-      scores.splice(i, 0, newScore);
-      found = true;
-      break;
+    if (prevScore.name === newScore.name) {
+    scores[i] = newScore;
+    found = true;
+    break;
     }
   }
 
   if (!found) {
     scores.push(newScore);
   }
+
+  scores.sort((a, b) => b.clicks - a.clicks);
 
   if (scores.length > 10) {
     scores.length = 10;
