@@ -9,8 +9,13 @@ export function Play(props) {
   const [quoteAuthor, setQuoteAuthor] = React.useState('unknown');
 
   React.useEffect(() => {
-    setQuote('Believe It!');
-    setQuoteAuthor('Naruto Uzumaki');
+    fetch("https://animechan.xyz/api/random/anime?title=naruto")
+      .then((response) => response.json())
+      .then((data) => {
+        setQuote(data.quote);
+        setQuoteAuthor(data.character);
+      })
+      .catch(error => console.error("Error fetching quote:", error));
   }, []);
 
   return (
