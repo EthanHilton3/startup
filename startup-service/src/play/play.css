@@ -58,23 +58,13 @@ img {
   background-color: white;
 }
 
-.quote {
+.fact {
   font-size: 1.5em;
   font-style: italic;
 }
 
-.quote-box {
-  margin-top: 1em;
+.fact-box {
   padding: 0.5em;
   border-radius: 5px;
-}
-
-.author {
-  font-weight: bold;
-  text-align: right;
-}
-
-.author::before {
-  content: " - ";
 }
 

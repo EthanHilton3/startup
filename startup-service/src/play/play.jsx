@@ -5,17 +5,16 @@ import { Players } from './players';
 import { Game } from './game';
 
 export function Play(props) {
-  const [quote, setQuote] = React.useState('Loading...');
-  const [quoteAuthor, setQuoteAuthor] = React.useState('unknown');
+  const [fact, setFact] = React.useState('Loading...');
 
   React.useEffect(() =>  {
     async function getFact() {
       const response = await fetch("https://meowfacts.herokuapp.com/");
       const data = await response.json();
       console.log(data.data[0]);
-      setQuote(data.data[0]);
+      setFact(data.data[0]);
     }
-    
+
     getFact()
   }, []);
 
@@ -24,9 +23,8 @@ export function Play(props) {
       <Players userName={props.userName} />
       <Game userName={props.userName} />
 
-      <div className="quote-box flex text-center">
-        <p className='quote'>{quote}</p>
-        <p className='author'>{quoteAuthor}</p>
+      <div className="fact-box flex text-center">
+        <p className='fact'>{fact}</p>
       </div>
     </main>
   );
