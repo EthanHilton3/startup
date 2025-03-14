@@ -31,8 +31,8 @@ app.use(`/api`, apiRouter);
 app.use(cors());
 apiRouter.get("/api/quote", async (_req, res) => {
   try {
-      const response = await fetch("https://ww25.animechan.io/api/v1/quotes/random/anime?title=naruto");
-      const data = await response;
+      const response = await fetch("https://animechan.io/api/v1/quotes/random/anime?title=naruto");
+      const data = response;
       console.log(data)
       res.send(data);
   } catch (error) {
@@ -88,12 +88,15 @@ const verifyAuth = async (req, res, next) => {
 
 // GetScores
 apiRouter.get('/scores', verifyAuth, (_req, res) => {
+  console.log("Inside get /scores endpoint")
   res.send(scores);
 });
 
 // SubmitScore
 apiRouter.post('/score', verifyAuth, (req, res) => {
+  console.log("Inside post /score endopoint");
   scores = updateScores(req.body);
+  console.log(scores);
   res.send(scores);
 });
 
@@ -109,17 +112,23 @@ app.use((_req, res) => {
 
 // updateScores considers a new score for inclusion in the high scores.
 function updateScores(newScore) {
+  console.log("inside UpdateScores")
   let found = false;       
   for (const [i, prevScore] of scores.entries()) {
     if (prevScore.name === newScore.name) {
-    scores[i] = newScore;
-    found = true;
-    break;
+      console.log("Was found");
+      if (scores[i].clicks < newScore.clicks) {
+        scores[i] = newScore;
+      }
+      found = true;
+      break;
     }
   }
 
   if (!found) {
+    console.log("Was not found");
     scores.push(newScore);
+    console.log(scores);
   }
 
   scores.sort((a, b) => b.clicks - a.clicks);
@@ -127,7 +136,7 @@ function updateScores(newScore) {
   if (scores.length > 10) {
     scores.length = 10;
   }
-
+  console.log(scores)
   return scores;
 }
 

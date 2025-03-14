@@ -83,6 +83,7 @@ export function SimonGame(props) {
   async function saveScore(score) {
     const date = new Date().toLocaleDateString();
     const newScore = { name: userName, score: score, date: date };
+    console.log("In saveScore with newScore of ", newScore);
 
     await fetch('/api/score', {
       method: 'POST',
