@@ -31,14 +31,14 @@ export function Game(props) {
 
       const date = new Date().toLocaleDateString();
       const newScore = { name: userName, clicks: clicks, date: date};
-      console.log("newScore", newScore);
+      //console.log("newScore", newScore);
 
       let response = await fetch('/api/score', {
         method: 'post',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(newScore),
       });
-      console.log("post fetch of /api/score", response.json());
+      //console.log("post fetch of /api/score", response.json());
 
       if (clicks === 1) {
         GameNotifier.broadcastEvent(userName, GameEvent.Start, newScore);

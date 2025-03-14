@@ -29,14 +29,17 @@ app.use(`/api`, apiRouter);
 
 // 3rd party API endpoint
 app.use(cors());
-apiRouter.get("/api/quote", async (_req, res) => {
+apiRouter.get("/api/facts", async (_req, res) => {
+  console.log("Inside /api/facts");
   try {
-      const response = await fetch("https://animechan.io/api/v1/quotes/random/anime?title=naruto");
+      //const response = await fetch("https://animechan.io/api/v1/quotes/random/anime?title=naruto");
+      //const response = await fetch("https://anime-facts-rest-api.herokuapp.com/api/v1/fma_brotherhood");
+      const response = await fetch ("https://meowfacts.herokuapp.com/")
       const data = response;
-      console.log(data)
+      console.log(data);
       res.send(data);
   } catch (error) {
-      res.status(500).send({ msg: "Failed to fetch quote" });
+      res.status(500).send({ msg: "Failed to fetch fact" });
   }
 });
 
@@ -88,15 +91,15 @@ const verifyAuth = async (req, res, next) => {
 
 // GetScores
 apiRouter.get('/scores', verifyAuth, (_req, res) => {
-  console.log("Inside get /scores endpoint")
+  //console.log("Inside get /scores endpoint")
   res.send(scores);
 });
 
 // SubmitScore
 apiRouter.post('/score', verifyAuth, (req, res) => {
-  console.log("Inside post /score endopoint");
+  //console.log("Inside post /score endopoint");
   scores = updateScores(req.body);
-  console.log(scores);
+  //console.log(scores);
   res.send(scores);
 });
 
@@ -112,11 +115,11 @@ app.use((_req, res) => {
 
 // updateScores considers a new score for inclusion in the high scores.
 function updateScores(newScore) {
-  console.log("inside UpdateScores")
+  //console.log("inside UpdateScores")
   let found = false;       
   for (const [i, prevScore] of scores.entries()) {
     if (prevScore.name === newScore.name) {
-      console.log("Was found");
+      //console.log("Was found");
       if (scores[i].clicks < newScore.clicks) {
         scores[i] = newScore;
       }
@@ -126,9 +129,9 @@ function updateScores(newScore) {
   }
 
   if (!found) {
-    console.log("Was not found");
+    //console.log("Was not found");
     scores.push(newScore);
-    console.log(scores);
+    //console.log(scores);
   }
 
   scores.sort((a, b) => b.clicks - a.clicks);
@@ -136,7 +139,7 @@ function updateScores(newScore) {
   if (scores.length > 10) {
     scores.length = 10;
   }
-  console.log(scores)
+  //console.log(scores)
   return scores;
 }
 

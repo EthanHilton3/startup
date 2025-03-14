@@ -9,13 +9,13 @@ export function Play(props) {
   const [quoteAuthor, setQuoteAuthor] = React.useState('unknown');
 
   React.useEffect(() => {
-    fetch("/api/quote")
+    fetch("/api/facts")
       .then((response) => response.json())
       .then((data) => {
-        setQuote(data.quote);
-        setQuoteAuthor(data.character);
+        setQuote(data[0].fact);
+        setQuoteAuthor("Tis true");
       })
-      .catch(error => console.error("Error fetching quote:", error));
+      .catch(error => console.error("Error fetching fact:", error));
   }, []);
 
   return (
