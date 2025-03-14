@@ -8,14 +8,15 @@ export function Play(props) {
   const [quote, setQuote] = React.useState('Loading...');
   const [quoteAuthor, setQuoteAuthor] = React.useState('unknown');
 
-  React.useEffect(() => {
-    fetch("/api/facts")
-      .then((response) => response.json())
-      .then((data) => {
-        setQuote(data[0].fact);
-        setQuoteAuthor("Tis true");
-      })
-      .catch(error => console.error("Error fetching fact:", error));
+  React.useEffect(() =>  {
+    async function getFact() {
+      const response = await fetch("https://meowfacts.herokuapp.com/");
+      const data = await response.json();
+      console.log(data.data[0]);
+      setQuote(data.data[0]);
+    }
+    
+    getFact()
   }, []);
 
   return (
