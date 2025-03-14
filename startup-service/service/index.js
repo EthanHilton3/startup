@@ -3,7 +3,6 @@ const bcrypt = require('bcryptjs');
 const express = require('express');
 const uuid = require('uuid');
 const app = express();
-const cors = require("cors");
 
 const authCookieName = 'token';
 
@@ -26,22 +25,6 @@ app.use(express.static('public'));
 // Router for service endpoints
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
-
-// 3rd party API endpoint
-app.use(cors());
-apiRouter.get("/api/facts", async (_req, res) => {
-  console.log("Inside /api/facts");
-  try {
-      //const response = await fetch("https://animechan.io/api/v1/quotes/random/anime?title=naruto");
-      //const response = await fetch("https://anime-facts-rest-api.herokuapp.com/api/v1/fma_brotherhood");
-      const response = await fetch ("https://meowfacts.herokuapp.com/")
-      const data = response;
-      console.log(data);
-      res.send(data);
-  } catch (error) {
-      res.status(500).send({ msg: "Failed to fetch fact" });
-  }
-});
 
 // CreateAuth a new user
 apiRouter.post('/auth/create', async (req, res) => {
