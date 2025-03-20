@@ -106,11 +106,11 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Node.js/Express HTTP service** - I did not complete this part of the deliverable.
-- [ ] **Static middleware for frontend** - I did not complete this part of the deliverable.
-- [ ] **Calls to third party endpoints** - I did not complete this part of the deliverable.
-- [ ] **Backend service endpoints** - I did not complete this part of the deliverable.
-- [ ] **Frontend calls service endpoints** - I did not complete this part of the deliverable.
+- [x] **Node.js/Express HTTP service** - I have my index.js file which serves as my backend server
+- [x] **Static middleware for frontend** - I use various middleware including cookieparser and verifyAuth.
+- [x] **Calls to third party endpoints** - In my play.jsx file, I use a random cat fact api
+- [x] **Backend service endpoints** - I have get and post endpoints for scores. Additionally I have post and delete endpoints for creating users, logging in and logging out.
+- [x] **Frontend calls service endpoints** - I called all my backend endpoints in order to create users, log in, log out, and play my game.
 
 ## 🚀 DB/Login deliverable
 
