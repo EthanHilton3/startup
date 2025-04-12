@@ -79,9 +79,7 @@ apiRouter.get('/scores', verifyAuth, async (_req, res) => {
 
 // SubmitScore
 apiRouter.post('/score', verifyAuth, (req, res) => {
-  //console.log("Inside post /score endopoint");
-  scores = updateScores(req.body);
-  //console.log(scores);
+  const scores = updateScores(req.body);
   res.send(scores);
 });
 
