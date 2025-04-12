@@ -96,7 +96,15 @@ Startup: ./deployReact.sh -k ~/Downloads/260key.pem -h peachfromtheirs.click -s 
 
 ## React Part 2: Reactivity
 
+```
 ./deployReact.sh -k ~/Downloads/260key.pem -h peachfromtheirs.click -s simon
+```
+
+## Service & DB
+
+```
+./deployService.sh -k ~/Downloads/260key.pem -h peachfromtheirs.click -s startup
+```
 
 This was a lot of fun to see it all come together. I had to keep remembering to use React state instead of just manipulating the DOM directly.
 
