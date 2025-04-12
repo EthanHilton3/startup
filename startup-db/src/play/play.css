@@ -1,0 +1,70 @@
+#count {
+  color: rgb(246, 239, 158);
+}
+
+.players {
+  flex: 1;
+  width: 100%;
+  padding: 0.5em;
+}
+
+.player-name {
+  color: rgb(0, 61, 165);
+}
+
+#player-messages {
+  padding-top: 0.25em;
+  opacity: 0.7;
+}
+
+.event {
+  color: rgb(220, 220, 220);
+}
+
+.player-event {
+  color: rgb(165, 220, 235);
+}
+
+.system-event {
+  color: rgb(221, 148, 40);
+}
+
+.game {
+  flex: content;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 25%;
+}
+
+.score {
+  position: relative;
+  text-align: center;
+  font-size: 50px;
+  font-family: monospace;
+  font-weight: bold;
+  color: rgb(0, 61, 165);;
+  cursor: default;
+  
+  border-radius: 15px;
+  border: solid thin rgb(0, 61, 165);
+  background-color: white;
+}
+
+.fact {
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+.fact-box {
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
