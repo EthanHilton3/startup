@@ -94,7 +94,9 @@ app.use((_req, res) => {
 });
 
 // updateScores considers a new score for inclusion in the high scores.
-function updateScores(newScore) {
+async function updateScores(newScore) {
+  await DB.addScore(newScore);
+  return DB.getHighScores();
   //console.log("inside UpdateScores")
   let found = false;       
   for (const [i, prevScore] of scores.entries()) {
