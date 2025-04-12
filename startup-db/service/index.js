@@ -97,32 +97,6 @@ app.use((_req, res) => {
 async function updateScores(newScore) {
   await DB.addScore(newScore);
   return DB.getHighScores();
-  //console.log("inside UpdateScores")
-  let found = false;       
-  for (const [i, prevScore] of scores.entries()) {
-    if (prevScore.name === newScore.name) {
-      //console.log("Was found");
-      if (scores[i].clicks < newScore.clicks) {
-        scores[i] = newScore;
-      }
-      found = true;
-      break;
-    }
-  }
-
-  if (!found) {
-    //console.log("Was not found");
-    scores.push(newScore);
-    //console.log(scores);
-  }
-
-  scores.sort((a, b) => b.clicks - a.clicks);
-
-  if (scores.length > 10) {
-    scores.length = 10;
-  }
-  //console.log(scores)
-  return scores;
 }
 
 async function createUser(email, password) {
