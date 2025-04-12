@@ -78,7 +78,7 @@ apiRouter.get('/scores', verifyAuth, async (_req, res) => {
 });
 
 // SubmitScore
-apiRouter.post('/score', verifyAuth, (req, res) => {
+apiRouter.post('/score', verifyAuth, async (req, res) => {
   const scores = updateScores(req.body);
   res.send(scores);
 });
