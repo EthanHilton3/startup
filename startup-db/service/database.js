@@ -34,8 +34,22 @@ async function updateUser(user) {
   await userCollection.updateOne({ email: user.email }, { $set: user });
 }
 
-async function addScore(score) {
-  return scoreCollection.insertOne(score);
+async function addScore(newScore) {
+  const collection = db.collection('scores');
+
+  // Try to find an existing score
+  const existing = await collection.findOne({ name: newScore.name });
+
+  if (!existing) {
+    // No score yet? Just insert it
+    await collection.insertOne(newScore);
+  } else if (existing.clicks < newScore.clicks) {
+    // New score is better? Update it
+    await collection.updateOne(
+      { name: newScore.name },
+      { $set: { clicks: newScore.clicks } }
+    );
+  }
 }
 
 function getHighScores() {
