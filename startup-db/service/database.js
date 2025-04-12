@@ -5,7 +5,7 @@ const url = `mongodb+srv://${config.userName}:${config.password}@${config.hostna
 const client = new MongoClient(url);
 const db = client.db('startup');
 const userCollection = db.collection('user');
-const scoreCollection = db.collection('score');
+const scoreCollection = db.collection('scores');
 
 // This will asynchronously test the connection and exit the process if it fails
 (async function testConnection() {
@@ -52,7 +52,27 @@ async function addScore(newScore) {
   }
 }
 
-function getHighScores() {
+async function getHighScores() {
+  console.log('Fetching high scores...');
+
+  // Step 1: Create the cursor
+  const cursor = scoreCollection.find();
+  console.log('Cursor created:', cursor);
+
+  // Step 2: Apply sorting
+  const sortedCursor = cursor.sort({ clicks: -1 });
+  console.log('Sorting applied');
+
+  // Step 3: Apply limit
+  const limitedCursor = sortedCursor.limit(10);
+  console.log('Limit applied');
+
+  // Step 4: Convert to array
+  const scores = await limitedCursor.toArray();
+  console.log('Scores retrieved:', scores);
+
+  return scores;
+  
   return scoreCollection.find().sort({ clicks: -1 }).limit(10).toArray();
 }
 
