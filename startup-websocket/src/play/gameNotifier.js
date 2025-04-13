@@ -17,13 +17,21 @@ class GameEventNotifier {
   handlers = [];
 
   constructor() {
-    // Simulate chat messages that will eventually come over WebSocket
-    setInterval(() => {
-      const score = Math.floor(Math.random() * 100);
-      const date = new Date().toLocaleDateString();
-      const userName = 'Deku';
-      this.broadcastEvent(userName, GameEvent.Update, { name: userName, clicks: score, date: date });
-    }, 10000);
+    let port = window.location.port;
+    const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
+    this.socket = new WebSocket(`${protocol}://${window.location.hostname}:${port}/ws`);
+    this.socket.onopen = (event) => {
+      this.receiveEvent(new EventMessage('CougarClicker', GameEvent.System, { msg: 'connected' }));
+    };
+    this.socket.onclose = (event) => {
+      this.receiveEvent(new EventMessage('CougarClicker', GameEvent.System, { msg: 'disconnected' }));
+    };
+    this.socket.onmessage = async (msg) => {
+      try {
+        const event = JSON.parse(await msg.data.text());
+        this.receiveEvent(event);
+      } catch {}
+    };
   }
 
   broadcastEvent(from, type, value) {
