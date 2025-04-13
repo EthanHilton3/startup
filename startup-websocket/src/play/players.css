@@ -1,0 +1,30 @@
+.players {
+  padding: 0.5em;
+  position: relative;
+  
+}
+.player-name {
+  color: rgb(118, 190, 210);
+  margin: 0 0.25em;
+}
+
+#player-messages {
+  padding-top: 0.25em;
+  opacity: 0.7;
+  width: fit-content;
+}
+
+.event {
+  color: rgb(200, 200, 200);
+  width: fit-content;
+}
+
+.player-event {
+  color: rgb(165, 220, 235);
+  margin: 0 0.25em;
+}
+
+.system-event {
+  color: rgb(221, 148, 40);
+  margin: 0 0.25em;
+}
