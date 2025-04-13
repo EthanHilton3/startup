@@ -53,27 +53,25 @@ async function addScore(newScore) {
 }
 
 async function getHighScores() {
-  console.log('Fetching high scores...');
+  // console.log('Fetching high scores...');
 
   // Step 1: Create the cursor
   const cursor = scoreCollection.find();
-  console.log('Cursor created:', cursor);
+  // console.log('Cursor created:', cursor);
 
   // Step 2: Apply sorting
   const sortedCursor = cursor.sort({ clicks: -1 });
-  console.log('Sorting applied');
+  // console.log('Sorting applied');
 
   // Step 3: Apply limit
   const limitedCursor = sortedCursor.limit(10);
-  console.log('Limit applied');
+  // console.log('Limit applied');
 
   // Step 4: Convert to array
   const scores = await limitedCursor.toArray();
-  console.log('Scores retrieved:', scores);
+  // console.log('Scores retrieved:', scores);
 
   return scores;
-  
-  return scoreCollection.find().sort({ clicks: -1 }).limit(10).toArray();
 }
 
 module.exports = {
