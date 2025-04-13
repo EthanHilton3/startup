@@ -126,8 +126,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Backend listens for WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **Frontend makes WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **Data sent over WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **WebSocket data displayed** - I did not complete this part of the deliverable.
-- [ ] **Application is fully functional** - I did not complete this part of the deliverable.
+- [x] **Backend listens for WebSocket connection** - I set up my http listener in my index.js file
+- [x] **Frontend makes WebSocket connection** - My peerProxy.js files successfully connects with all frontend requests
+- [x] **Data sent over WebSocket connection** - My gameNotifier.js file sends messages over the socket
+- [x] **WebSocket data displayed** - The messages sent over the WEbsocket are displayed on my play page
+- [x] **Application is fully functional** - Every technology is fully implemented and CougarClicker is a smashing success!
