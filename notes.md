@@ -21,7 +21,19 @@ Repeat
 
 My IP address is: 107.21.94.91
 
-how to access my AWS server: ssh -i ~/Downloads/260key.pem ubuntu@107.21.94.91
+how to access my AWS server: 
+
+```
+ssh -i ~/Downloads/260key.pem ubuntu@107.21.94.91
+```
+
+```
+ssh -i ~/Downloads/260key.pem ubuntu@peachfromtheirs.click
+```
+check logs
+```
+pm2 logs startup
+```
 
 
 ## Caddy
