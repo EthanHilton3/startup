@@ -131,3 +131,18 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] **Data sent over WebSocket connection** - My gameNotifier.js file sends messages over the socket
 - [x] **WebSocket data displayed** - The messages sent over the WEbsocket are displayed on my play page
 - [x] **Application is fully functional** - Every technology is fully implemented and CougarClicker is a smashing success!
+
+## 🚀 Diffusion Lab deliverable
+
+For this deliverable I added an AI image generation lab using diffusion models. I checked the box `[x]` and added a description for things I completed.
+
+- [x] **New Diffusion Lab Component** - Created a new React component for AI image generation
+- [x] **User Interface** - Built a modern, responsive UI with gradient background and intuitive controls
+- [x] **Text Prompt Input** - Added input field for users to describe the image they want to generate
+- [x] **API Integration** - Integrated with Hugging Face Inference API using Stable Diffusion 2.1 model
+- [x] **Image Display** - Display generated images with proper styling and layout
+- [x] **Loading States** - Added loading spinner and status messages during image generation
+- [x] **Error Handling** - Proper error handling and user-friendly error messages
+- [x] **Download Feature** - Users can download generated images
+- [x] **Navigation** - Added "Diffusion Lab" link to navigation (visible to authenticated users only)
+- [x] **Educational Content** - Included information about how diffusion models work and tips for better results

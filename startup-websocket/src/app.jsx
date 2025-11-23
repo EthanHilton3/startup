@@ -4,6 +4,7 @@ import { Login } from './login/login';
 import { Play } from './play/play';
 import { Scores } from './scores/scores';
 import { About } from './about/about';
+import { Diffusion } from './diffusion/diffusion';
 import { AuthState } from './login/authState';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
@@ -41,6 +42,13 @@ export default function App() {
                                 </NavLink>
                                 </li>
                             )}
+                            {authState === AuthState.Authenticated && (
+                                <li className='nav-item'>
+                                <NavLink className='nav-link' to='diffusion'>
+                                    Diffusion Lab
+                                </NavLink>
+                                </li>
+                            )}
                             <li className="nav-item">
                             <NavLink className="nav-link" to="about">
                                 About
@@ -69,6 +77,7 @@ export default function App() {
                     />
                     <Route path='/play' element={<Play userName={userName} />} />
                     <Route path='/scores' element={<Scores />} />
+                    <Route path='/diffusion' element={<Diffusion />} />
                     <Route path='/about' element={<About />} />
                     <Route path='*' element={<NotFound />} />
                 </Routes>
