@@ -8,6 +8,15 @@ export function Diffusion() {
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState('');
 
+  // Cleanup object URL when component unmounts or imageUrl changes
+  React.useEffect(() => {
+    return () => {
+      if (imageUrl) {
+        URL.revokeObjectURL(imageUrl);
+      }
+    };
+  }, [imageUrl]);
+
   async function generateImage() {
     if (!prompt.trim()) {
       setError('Please enter a prompt');
@@ -20,6 +29,8 @@ export function Diffusion() {
 
     try {
       // Using Hugging Face Inference API with a public model
+      // Note: For production, add Authorization header with API token to avoid rate limiting:
+      // 'Authorization': `Bearer ${process.env.HUGGINGFACE_API_TOKEN}`
       const response = await fetch(
         'https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2-1',
         {
@@ -32,12 +43,22 @@ export function Diffusion() {
       );
 
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || 'Failed to generate image');
+        let errorMessage = 'Failed to generate image';
+        try {
+          const errorData = await response.json();
+          errorMessage = errorData.error || errorMessage;
+        } catch {
+          // If JSON parsing fails, use default error message
+        }
+        throw new Error(errorMessage);
       }
 
       // Get the image blob
       const blob = await response.blob();
+      // Revoke old URL before creating new one to prevent memory leaks
+      if (imageUrl) {
+        URL.revokeObjectURL(imageUrl);
+      }
       const url = URL.createObjectURL(blob);
       setImageUrl(url);
     } catch (err) {
